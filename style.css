@@ -1,0 +1,63 @@
+/* fonts */
+@font-face {
+  font-family: 'Circular';
+  src: url(/assets/fonts/lineto-circular-black.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Circular Pro';
+  src: url(/assets/fonts/lineto-circular-pro-medium.ttf);
+  font-weight: 500;
+}
+
+:root {
+  --ffamily-bold: 'Circular', sans-serif;
+  --ffamily-medium: 'Circular Pro', sans-serif;
+  --dark: #181818;
+  --light: #f8f8f8;
+  --unactive-link-color: #b3b3b3;
+  --active-link-color: #fff;
+
+  --animate-delay: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* html { 
+  background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+body {
+  /* font-size: var(--fs-body); */
+  /* line-height: 1.6; */
+  line-height: 1.5;
+  font-family: var(--ffamily-medium);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-family: var(--ffamily-bold);
+}
+
+.backdrop-blur {
+  background-color: rgba(8, 2, 2, 0.582);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

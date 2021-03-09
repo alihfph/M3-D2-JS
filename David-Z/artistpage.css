@@ -1,0 +1,16 @@
+body{
+    background-color: #181818;
+}
+div.jumbotron{
+    height: 65vh;
+}
+.my-button{
+    border-radius: 50px;
+    background-color: #1db954;
+
+}
+.my-btn-lg {
+padding: 1rem 1.6rem;
+font-size: 30px;
+line-height: 1.5;
+}

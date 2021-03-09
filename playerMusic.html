@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- normalize css -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    /> -->
+    <!-- animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- random pick link "https://picsum.photos/300?random=2" -->
+
+    <link rel="stylesheet" href="./playerMusic.css" />
+
+    <title>Spotify Clone!</title>
+  </head>
+  <body>
+    <div class="container-fluid" style="height: 100vh;">
+      <!--Here Start Footer now-playing-bar-->
+      <div
+        class="now-playing-bar px-0 container-fluid fixed-bottom"
+      >
+      <!--Progress bar in top for sm-->
+        <div class="container-fluid px-0 d-sm-none">
+          <div class="row no-gutters">
+            <div class="col-12" style="width: inherit;">
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Here end prgress bar sm-->
+        <div class="row px-4 align-items-center justify-content-around">
+          <!--Here start Small devices now-playing-bar-->
+          <div class="col-12 px-0 d-flex align-items-center justify-content-center d-sm-none d-md-none d-lg-none" style="height: 100%;">
+            <div class="row no-gutters" style="width: inherit;">
+              <div class="col-12 d-flex justify-content-between" style="width: inherit;">
+                <div class="col d-flex col-3 np-links-to align-items-center">
+                  <img src="https://via.placeholder.com/39" alt="Cover Album" />
+                  <a class="ml-2" href="">Song</a>
+                  <!--link to Album-->
+                </div>
+                <div class="col d-flex col-4 align-items-center justify-content-between">
+                  <div class="d-flex px-2">
+                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-mobile"></i>
+                    <i class="fab fa-bluetooth-b d-none"></i>
+                  </div>
+                  <div class="d-flex px-2">
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-pause d-none"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Here end Small devices now-playing-->
+          <div class="col now-playing px-2 d-none d-sm-block col-sm-4 col-md-4 col-lg-3">
+            <div class="row align-items-center">
+                <div class="col px-0 col-sm-4">
+                  <img class="ml-2" src="https://via.placeholder.com/56" alt="Cover Album" />
+                </div>
+                <div class="col px-0 col-sm-3 np-links-to">
+                    <a href="">Song</a>
+                  <!--link to Album-->
+                    <a href="">Genre</a>
+                  <!-- link to genre-->
+                </div>
+                <div class="col px-0 col-sm-2 d-flex align-items-center">
+                  <i class="far fa-heart px-1"></i>
+                  <i class="far fa-square px-1"></i>
+                </div>
+            </div>
+          </div>
+          <div class="col player-controls px-2 d-none d-sm-block col-sm-7 col-md-6 col-lg-6 ">
+            <div class="user-buttons d-flex align-items-end">
+              <div class="col-sm-12 col-lg-8 d-flex justify-content-center m-auto">
+                <div class="random-button col">
+                  <i class="fas fa-random"></i>
+                </div>
+                <div class="prev-button col">
+                  <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="play-button col">
+                  <i class="fas fa-play"></i>
+                  <i class="fas fa-pause d-none"></i>
+                </div>
+                <div class="next-button col">
+                  <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="repeat-button col">
+                  <i class="fas fa-redo-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-around">
+              <div class="col text-center col-md-2 "><small>13:45</small></div>
+              <div class="col col-sm-6 col-md-8">
+                <div class="progress" style="height: 4px">
+                  <div
+                    class="progress-bar bg-success w-75"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="col text-center col-md-2"><small>15:50</small></div>
+            </div>
+          </div>
+          <div
+            class="col extra-controls text-center px-2 d-none d-sm-block col-sm-1 col-md-2 col-lg-3"
+          >
+            <div class="row align-items-center justify-content-center">
+              <!--button collapsable md-->
+              <div class="container d-none d-sm-block d-lg-none">
+                <div class="btn-group dropup">
+                  <button
+                    type="button"
+                    class="my-btn btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  ></button>
+                  <div class="dropdown-menu">
+                    <div
+                      class="col px-1 py-1 list-next d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fas fa-list px-2"></i>
+                    </div>
+                    <div
+                      class="col px-1 py-1 devices d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fas fa-desktop"></i>
+                      <i class="fas fa-mobile"></i>
+                    </div>
+                    <div
+                      class="col px-1 py-1 volume-control d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fas fa-volume-up px-2"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of button-->
+              <div class="row d-none d-lg-flex align-items-center">
+                <div class="col-2 list-next d-flex align-items-center">
+                  <i class="fas fa-list px-2"></i>
+                </div>
+                <div class="col-2 devices d-flex align-items-center">
+                  <i class="fas fa-desktop"></i>
+                  <i class="fas fa-mobile"></i>
+                </div>
+                <div class="col-8 volume-control d-flex align-items-center">
+                  <i class="fas fa-volume-off px-2 d-none"></i>
+                  <i class="fas fa-volume-down px-2 d-none"></i>
+                  <i class="fas fa-volume-up px-2"></i>
+                  <i class="fas fa-volume-mute px-2 d-none"></i>
+                  <div class="d-flex px-1">
+                    <input class="custom-range" type="range" name="" id="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

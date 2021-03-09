@@ -1,0 +1,70 @@
+/*++++ Here Starts Added for David-Z*/
+#musicPlayer {
+  transition: var(--transition-time);
+}
+
+.now-playing-bar {
+  height: 90px;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+  color: #b3b3b3;
+}
+.now-playing-bar > div.row {
+  height: 100%;
+}
+.np-links-to {
+  font-size: 14px;
+  line-height: 1.3;
+}
+.np-links-to a {
+  color: #b3b3b3;
+}
+.my-btn {
+  border-radius: 50px;
+}
+.dropdown-menu {
+  min-width: 2rem;
+  background-color: #181818;
+  border: 1px solid #282828;
+  /* color: #f8f8f8ce; */
+  color: #b3b3b3;
+}
+.dropup .dropdown-toggle::after {
+  display: inline-block;
+  margin: auto;
+  vertical-align: 0.255em;
+  content: '';
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+}
+.custom-range::-webkit-slider-thumb {
+  background: #28a745;
+}
+
+.custom-range::-moz-range-thumb {
+  background: #28a745;
+}
+
+.custom-range::-ms-thumb {
+  background: #28a745;
+}
+
+@media (max-width: 575.98px) {
+  .now-playing-bar {
+    height: 45px;
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    color: #b3b3b3;
+    bottom: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .now-playing-bar {
+    bottom: 45px;
+  }
+}
+
+/*++++ Here End Added for David-Z*/

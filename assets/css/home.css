@@ -1,0 +1,388 @@
+:root {
+  --transition-time: 0.2s;
+  --left-postition-bottom-menu: -97px;
+}
+
+/* html { 
+  background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+/* --------------------------------------------------------------- */
+
+/* ASIDE DESKTOP ----------------------------------------------------- */
+#sideMenuDesktop {
+  width: 400px;
+  height: calc(100vh - 90px);
+  background-color: #000;
+  position: sticky;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  #sideMenuDesktop {
+    width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  #sideMenuDesktop {
+    width: 300px;
+  }
+}
+/* side header----------- */
+.side-menu-header {
+  /* height: 30%; */
+  width: 100%;
+}
+.spotify-logo--text {
+  height: 40px;
+  color: #fff;
+}
+
+#sideMenuDesktop a {
+  color: var(--unactive-link-color);
+  transition: var(--transition-time);
+  width: 100%;
+}
+#sideMenuDesktop a:hover {
+  text-decoration: none;
+  color: var(--active-link-color);
+}
+.side-btn-wrapper {
+  width: 95%;
+}
+#sideMenuDesktop a.active {
+  color: var(--active-link-color);
+  background-color: #282828;
+  border-radius: 8px;
+}
+/* side header --- create playlist */
+.home-create-playlists-fav-songs--heading {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.create-play-svg {
+  background: #f8f8f871;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  fill: #000;
+  transition: var(--transition-time);
+}
+.create-playlist-btn:hover .create-play-svg {
+  background: #f8f8f8;
+}
+
+.add-fav-song-svg-wrapper {
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-fav-song-svg-wrapper > svg > path + path {
+  fill: var(--unactive-link-color);
+  transition: var(--transition-time);
+}
+.add-fav-song-btn:hover .add-fav-song-svg-wrapper > svg > path + path {
+  fill: var(--active-link-color);
+}
+
+.side-btn-text {
+  font-size: 0.8rem;
+}
+
+/* side main --------------- */
+
+.side-menu-main {
+  height: 60vh;
+  line-height: 2;
+  /* width: 100%; */
+}
+
+@media (max-height: 1080px) {
+  .side-menu-main {
+    height: 47vh;
+  }
+}
+
+.side-menu-main ul li {
+  list-style: none;
+}
+.side-menu-main ul {
+  padding: 0;
+}
+
+.side-menu-main * {
+  color: var(--unactive-link-color);
+  font-size: 0.8rem;
+}
+
+.side-menu-main.user-playlists::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.side-menu-main.user-playlists::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.486);
+  border-radius: 8px;
+  width: 20px;
+}
+
+/* side footer */
+
+.side-menu-footer {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  right: 0;
+}
+.install-svg {
+  fill: var(--unactive-link-color);
+  transition: var(--transition-time);
+}
+
+.side-menu-footer:hover .install-svg {
+  fill: var(--active-link-color);
+}
+
+/* main section ------------------- */
+.home-wrapper {
+  transition: var(--transition-time) ease;
+}
+
+.home-main-section {
+  width: calc(100% - 300px);
+}
+@media (max-width: 768px) {
+  .home-main-section {
+    width: 100%;
+  }
+}
+
+/* custom dropdown */
+#userMenu {
+  background-color: #000;
+}
+#userImg {
+  height: 40px;
+  width: 40px;
+}
+#userName {
+  font-size: 1rem;
+}
+/* media per custom dropdown */
+@media (max-width: 992px) {
+  .dropdown-menu {
+    left: -600%;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .nav-item-dropdown {
+    padding: 10px 20px;
+  }
+}
+.dropdown-menu {
+  background: #282828;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #424141;
+}
+
+/* ============================= HOME MAIN SECTION ================================= */
+.home-main-section {
+  background-color: #131313;
+}
+
+#homeMainNav .nav-link {
+  color: var(--light);
+}
+/* navbar*/
+#homeMainNav {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  z-index: 30;
+}
+#prevBtn,
+#nextBtn,
+#openSideMenuBtn {
+  font-size: 1.5rem;
+}
+
+#prevBtn.nav-link,
+#nextBtn.nav-link,
+#openSideMenuBtn.nav-link {
+  color: var(--unactive-link-color);
+}
+#prevBtn.nav-link:hover,
+#nextBtn.nav-link:hover,
+#openSideMenuBtn.nav-link:hover {
+  color: var(--active-link-color);
+}
+
+#prevBtn.nav-link:active,
+#nextBtn.nav-link:active,
+#openSideMenuBtn.nav-link:active {
+  transform: scale(0.9);
+}
+
+/* rowsssss & caaaards */
+
+.card-custom {
+  height: 25vmin;
+  width: 18vmin;
+  background-color: rgb(24, 24, 24);
+  transition: var(--transition-time);
+  cursor: pointer;
+}
+.card-custom:hover {
+  background: #282828;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+}
+
+.card-image-wrapper {
+  height: 18vmin;
+  width: 100%;
+}
+.card-body-custom {
+  height: 7vmin;
+}
+.card-title-custom {
+  font-size: 0.6rem;
+}
+.card-text-custom {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 767px) {
+  .row-albums {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .card-custom {
+    height: 41vmin;
+    width: 30vmin;
+  }
+
+  .card-image-wrapper {
+    height: 30vmin;
+  }
+  .card-body-custom {
+    height: 11vmin;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-title-custom {
+    font-size: 0.6rem;
+  }
+  .card-text-custom {
+    display: none;
+  }
+  .section-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .card-title-custom {
+    font-size: 0.8rem;
+  }
+}
+
+.card-play-btn > i,
+.card-pause-btn > i {
+  background-color: #fff;
+  color: #1db954;
+  /* border: -1px solid #1db954; */
+  border-radius: 50%;
+  position: relative;
+  top: -20px;
+}
+/* ============================= HOME MAIN SECTION END============================== */
+
+/* ============================= FOOTER ========================================= */
+
+/* mobile menu bottom */
+#mobileBottomMenu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background: #000;
+  transition: var(--transition-time) ease;
+}
+
+.mobile-bottom-menu-wrapper {
+  position: relative;
+}
+
+/* in order to maninuplate via js */
+.mobile-bottom-menu-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: var(--left-postition-bottom-menu);
+  width: 40px;
+  height: 5px;
+  margin: 0 auto;
+  margin-bottom: 0.3rem;
+  border-radius: 16%;
+  background-color: #f8f8f8;
+  transition: var(--transition-time) ease;
+}
+
+#mobileBottomMenu > .mobile-bottom-menu-wrapper > a {
+  color: var(--unactive-link-color);
+  font-weight: bold;
+  margin-right: 0.6rem;
+  margin-left: 0.6rem;
+  padding-bottom: 0.1rem;
+}
+
+#mobileBottomMenu > .mobile-bottom-menu-wrapper > a:hover,
+#mobileBottomMenu > .mobile-bottom-menu-wrapper > a:active {
+  color: var(--active-link-color);
+}
+
+#mobileBottomMenu {
+  transition: var(--transition-time) ease;
+}
+#mobileBottomMenu > .mobile-bottom-menu-wrapper > a.active {
+  /* border-bottom: 2px solid #f8f8f8; */
+
+  color: #f8f8f8;
+}
+
+/* ============================= FOOTER END 🦶🏻================================== */
+
+/* ============================= SIDE MENU MOBILE END ================================ */
+
+/* animation playground 😄 🎮 */
+
+/* .side-mobile-menu-translated-in {
+  transform: translateX(0);
+} */

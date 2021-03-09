@@ -1,0 +1,13 @@
+.btn-custom-green {
+  background-color: #1db954;
+  font-size: 12px;
+  padding: 8px 34px;
+}
+.btn-custom-green > a {
+  color: var(--light);
+}
+
+.btn-custom-green:hover {
+  transform: scale(1.1);
+  background-color: #1ed760;
+}

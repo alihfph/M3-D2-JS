@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <!--  <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /> -->
+    <!-- new meta in order to make the slide mobile menu work -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+     user-scalable=0"
+    />
+    <!-- normalize css -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    /> -->
+    <!-- animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <!-- random pick link "https://picsum.photos/300?random=2" -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link rel="stylesheet" href="assets/css/playerMusic.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
+    <link rel="stylesheet" href="assets/css/install-mobile-app.css" />
+    <link rel="stylesheet" href="assets/css/side-menu-mobile.css" />
+    <link rel="stylesheet" href="assets/css/cards-play-btn-animation.css" />
+
+    <title>Spotify Clone!</title>
+  </head>
+  <body>
+    <!----------------------  login  ----------------------->
+
+    <div id="login" class="animate__animated animate__faster animate__zoomIn">
+      <h2 class="text-center text-dark my-3">
+        <i class="fab fa-spotify"></i> Spotify
+        <span style="font-size: 20px; margin-left: -12px">&#174;</span>
+      </h2>
+      <hr />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-2 col-sm"></div>
+          <div class="col-lg-4 col-md-8 col-sm">
+            <h6 class="text-center">To Continue, log into spotify</h6>
+            <button
+              type="button"
+              class="btn btn-primary rounded-pill btn-lg btn-block"
+              style="font-size: 12px; background-color: rgb(95, 95, 161)"
+            >
+              <i class="fab fa-facebook" id="listAlbum"></i> CONTINUE WITH FACEBOOK
+            </button>
+            <br />
+            <button
+              type="button"
+              class="btn btn-primary rounded-pill btn-lg btn-block bg-dark"
+              style="font-size: 12px"
+            >
+              <i class="fab fa-apple"></i> CONTINUE WITH APPLE
+            </button>
+            <hr class="small-hr-tag" />
+
+            <div class="input-group flex-nowrap">
+              <input
+                id="loginUser"
+                type="text"
+                class="form-control"
+                placeholder="Email address or username"
+                aria-label="Username"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+            <div class="input-group flex-nowrap my-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Passwords"
+                aria-label="Username"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+                <label for="rememberMe">Remember me</label>
+              </div>
+
+              <div class="col-6">
+                <button
+                  id="loginBtn"
+                  type="button"
+                  class="btn btn-success btn-md rounded-pill btn-block"
+                >
+                  Login
+                </button>
+              </div>
+            </div>
+
+            <h6 class="text-center mt-3 mb-5" style="font-size: 12px">
+              <a href="#" style="color: rgb(138, 185, 91)"
+                >Forget Your Password</a
+              >
+            </h6>
+            <hr />
+            <h6 class="text-center">Don't have an account?</h6>
+            <button
+              type="button"
+              class="btn btn-outline-dark rounded-pill btn-lg btn-block font-weight-bold"
+              style="font-size: 14px"
+            >
+              SIGN UP FOR SPOTIFY
+            </button>
+            <hr />
+            <h6 class="text-center text-muted" style="font-size: 9px">
+              If you click "Log i with FaceBook" and are not a spotify user, you
+              will be registered and you agree to spotify's
+              <a href="#">Terms and Conditions</a> and
+              <a href="#">Privacy Policy</a>
+            </h6>
+          </div>
+          <div class="col-lg-4 col-md-2 col-sm"></div>
+        </div>
+      </div>
+    </div>
+    <!------------------------login end --------------------->
+
+    <!----------------------  main  ----------------------->
+
+    <div
+      id="home"
+      class="container-fluid home-container px-0 d-none animate__animated animate__faster"
+    >
+      <div class="home-wrapper d-flex w-100">
+        <!----------------------  Sidemenu  ----------------------->
+        <aside class="d-none d-md-block py-4" id="sideMenuDesktop">
+          <!-- header -->
+          <div class="side-menu-header">
+            <!-- logo -->
+            <div class="home-page-logo pl-3 mb-3">
+              <a href="#" id="spotifyLogo"
+                ><svg viewBox="0 0 1134 340" class="spotify-logo--text">
+                  <title>Spotify</title>
+                  <path
+                    fill="currentColor"
+                    d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
+                  ></path></svg
+              ></a>
+            </div>
+            <!-- home search library -->
+            <div class="home-search-library-desktop d-flex flex-column">
+              <div
+                class="home-side-desktop-wrapper d-flex align-items-center side-btn-wrapper pl-2"
+              >
+                <a
+                  href="#"
+                  id="homeSideDesktop"
+                  class="active px-3 py-2 d-flex align-items-center"
+                >
+                  <svg
+                    viewBox="0 0 512 512"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span class="ml-3 side-btn-text">Home</span>
+                </a>
+              </div>
+              <div
+                class="search-side-desktop-wrapper d-flex align-items-center side-btn-wrapper pl-2"
+              >
+                <a
+                  href="#"
+                  id="searchSideDesktop"
+                  class="px-3 py-2 d-flex align-items-center"
+                >
+                  <svg
+                    viewBox="0 0 512 512"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M357.079 341.334l94.476 110.73-32.508 27.683-94.222-110.476q-45.714 30.476-100.826 30.476-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 23.365-5.841 45.714t-16.635 41.651-25.778 35.555zM224 357.079q28.19 0 53.841-11.048t44.19-29.587 29.587-44.19 11.048-53.841-11.048-53.841-29.587-44.191-44.19-29.587-53.841-11.047-53.841 11.047-44.191 29.588-29.587 44.19-11.047 53.841 11.047 53.841 29.588 44.19 44.19 29.587 53.841 11.048z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span class="ml-3 side-btn-text">Search</span>
+                </a>
+              </div>
+              <div
+                class="library-side-desktop-wrapper d-flex align-items-center side-btn-wrapper pl-2"
+              >
+                <a
+                  href="#"
+                  id="librarySideDesktop"
+                  class="px-3 py-2 d-flex align-items-center"
+                >
+                  <svg
+                    viewBox="0 0 512 512"
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span class="ml-3 side-btn-text">Your Library</span>
+                </a>
+              </div>
+            </div>
+            <!-- create playlist - favourite songs -->
+            <div
+              class="home-create-playlists-fav-songs pl-4 my-2 d-flex flex-column"
+            >
+              <h6
+                class="text-uppercase home-create-playlists-fav-songs--heading"
+              >
+                playlist
+              </h6>
+              <!-- create playlist BTN -->
+              <div
+                class="home-create-playlists--create-playlist-btn d-flex align-items-center side-btn-wrapper"
+              >
+                <a
+                  href="#"
+                  class="py-2 d-flex align-items-center create-playlist-btn"
+                >
+                  <svg
+                    class="create-play-svg"
+                    shape-rendering="crispEdges"
+                    viewBox="0 0 36 36"
+                  >
+                    <path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path>
+                  </svg>
+                  <span class="ml-2 side-btn-text">Create Playlist</span>
+                </a>
+              </div>
+              <!-- add favourite song BTN -->
+              <div
+                class="home-create-playlists--favourite-songs-btn d-flex align-items-center side-btn-wrapper border-bottom border-secondary"
+              >
+                <a
+                  href="#"
+                  class="py-2 d-flex align-items-center add-fav-song-btn"
+                >
+                  <div class="add-fav-song-svg-wrapper">
+                    <svg
+                      role="img"
+                      height="16"
+                      width="16"
+                      viewBox="0 0 16 16"
+                      class="Svg-ulyrgf-0 hJgLcF"
+                    >
+                      <path fill="none" d="M0 0h16v16H0z"></path>
+                      <path
+                        d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ml-2 side-btn-text">Favourite songs</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="side-menu-main user-playlists overflow-auto pt-2 px-4"
+          ></div>
+          <div class="side-menu-footer">
+            <div
+              class="home-side-desktop-wrapper d-flex align-items-center side-btn-wrapper pl-2"
+            >
+              <a
+                href="#"
+                id="installAppBtn"
+                class="px-3 py-2 d-flex align-items-center"
+              >
+                <svg
+                  role="img"
+                  height="24"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  class="install-svg"
+                >
+                  <path
+                    d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1 22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652 4.678 5.44 4.694-5.439-.757-.653-3.439 3.984z"
+                  ></path>
+                </svg>
+                <span class="ml-1 side-btn-text">Install our app</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+        <!------------------------Sidemenu end --------------------->
+
+        <!----------------------  main section  ----------------------->
+        <main class="home-main-section container-fluid px-3 pt-3">
+          <!----------------------  nav  ----------------------->
+          <!-- <span id="toasterEntryPoint"></span> -->
+
+          <ul
+            id="homeMainNav"
+            class="nav justify-content-start justify-content-md-center align-items-center pr-1 mb-lg-5 px-3 animate__animated animate__bounceInDown animate__faster"
+          >
+            <li class="nav-item d-md-none">
+              <a class="nav-link p-2" id="openSideMenuBtn" href="#"
+                ><i class="fas fa-bars"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" id="prevBtn" href="#"
+                ><i class="fas fa-chevron-circle-left"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-2" id="nextBtn" href="#"
+                ><i class="fas fa-chevron-circle-right"></i
+              ></a>
+            </li>
+            <span id="toasterEntryPoint"></span>
+
+            <li class="nav-item ml-auto nav-item-dropdown">
+              <div class="dropdown home-dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle dropleft rounded-pill p-0 pr-lg-3"
+                  type="button"
+                  id="userMenu"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    id="userImg"
+                    class="rounded-circle"
+                    src="https://robohash.org/striveschool"
+                  />
+                  <span id="userName" class="d-none d-lg-inline-block"
+                    >Ardi Germenji</span
+                  >
+                </button>
+                <div class="dropdown-menu" aria-labelledby="userMenu">
+                  <a class="dropdown-item text-white" href="#">Account</a>
+                  <a
+                    class="dropdown-item text-white border-bottom border-secondary"
+                    href="#"
+                    >Profile</a
+                  >
+                  <a class="dropdown-item text-white logout" href="#">Logout</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!------------------------nav end --------------------->
+
+          <div id="jsEntryPoint"></div>
+        </main>
+        <!------------------------main section end --------------------->
+      </div>
+
+      <!--Here Start Footer now-playing-bar----------------->
+      <div
+        id="musicPlayer"
+        class="now-playing-bar px-0 container-fluid fixed-bottom animate__animated animate__bounceInUp animate__faster"
+      >
+        <!--Progress bar in top for sm-->
+        <div class="container-fluid px-0 d-sm-none">
+          <div class="row no-gutters">
+            <div class="col-12" style="width: inherit">
+              <div class="progress" style="height: 2px">
+                <div
+                  class="progress-bar bg-success"
+                  role="progressbar"
+                  style="width: 25%"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Here end prgress bar sm-->
+        <div class="row px-4 align-items-center justify-content-around">
+          <!--Here start Small devices now-playing-bar-->
+          <div
+            class="col-12 px-0 d-flex align-items-center justify-content-center d-sm-none d-md-none d-lg-none"
+            style="height: 100%"
+          >
+            <div class="row no-gutters" style="width: inherit">
+              <div
+                class="col-12 d-flex justify-content-between"
+                style="width: inherit"
+              >
+                <div class="col d-flex col-3 np-links-to align-items-center">
+                  <img src="https://via.placeholder.com/39" alt="Cover Album" />
+                  <a class="ml-2" href="">Song</a>
+                  <!--link to Album-->
+                </div>
+                <div
+                  class="col d-flex col-4 align-items-center justify-content-between"
+                >
+                  <div class="d-flex px-2">
+                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-mobile"></i>
+                    <i class="fab fa-bluetooth-b d-none"></i>
+                  </div>
+                  <div class="d-flex px-2">
+                    <i class="fas fa-play"></i>
+                    <i class="fas fa-pause d-none"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Here end Small devices now-playing-->
+          <div
+            class="col now-playing px-2 d-none d-sm-block col-sm-4 col-md-4 col-lg-3"
+          >
+            <div class="row align-items-center">
+              <div class="col px-0 col-sm-4">
+                <img
+                  class="ml-2"
+                  src="https://via.placeholder.com/56"
+                  alt="Cover Album"
+                />
+              </div>
+              <div class="col px-0 col-sm-3 np-links-to">
+                <a href="">Song</a>
+                <!--link to Album-->
+                <a href="">Genre</a>
+                <!-- link to genre-->
+              </div>
+              <div class="col px-0 col-sm-2 d-flex align-items-center">
+                <i class="far fa-heart px-1"></i>
+                <i class="far fa-square px-1"></i>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col player-controls px-2 d-none d-sm-block col-sm-7 col-md-6 col-lg-6"
+          >
+            <div class="user-buttons d-flex align-items-end">
+              <div
+                class="col-sm-12 col-lg-8 d-flex justify-content-center m-auto"
+              >
+                <div class="random-button col">
+                  <i class="fas fa-random"></i>
+                </div>
+                <div class="prev-button col">
+                  <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="play-button col">
+                  <i class="fas fa-play"></i>
+                  <i class="fas fa-pause d-none"></i>
+                </div>
+                <div class="next-button col">
+                  <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="repeat-button col">
+                  <i class="fas fa-redo-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-around">
+              <div class="col text-center col-md-2"><small>13:45</small></div>
+              <div class="col col-sm-6 col-md-8">
+                <div class="progress" style="height: 4px">
+                  <div
+                    class="progress-bar bg-success w-75"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="col text-center col-md-2"><small>15:50</small></div>
+            </div>
+          </div>
+          <div
+            class="col extra-controls text-center px-2 d-none d-sm-block col-sm-1 col-md-2 col-lg-3"
+          >
+            <div class="row align-items-center justify-content-center">
+              <!--button collapsable md-->
+              <div class="container d-none d-sm-block d-lg-none">
+                <div class="btn-group dropup">
+                  <button
+                    type="button"
+                    class="my-btn btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  ></button>
+                  <div class="dropdown-menu">
+                    <div
+                      class="col px-1 py-1 list-next d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fas fa-list px-2"></i>
+                    </div>
+                    <div
+                      class="col px-1 py-1 devices d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fas fa-desktop"></i>
+                      <i class="fas fa-mobile"></i>
+                    </div>
+                    <div
+                      class="col px-1 py-1 volume-control d-flex justify-content-center align-items-center"
+                    >
+                      <i class="fas fa-volume-up px-2"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of button-->
+              <div class="row d-none d-lg-flex align-items-center">
+                <div class="col-2 list-next d-flex align-items-center">
+                  <i class="fas fa-list px-2"></i>
+                </div>
+                <div class="col-2 devices d-flex align-items-center">
+                  <i class="fas fa-desktop"></i>
+                  <i class="fas fa-mobile"></i>
+                </div>
+                <div class="col-8 volume-control d-flex align-items-center">
+                  <i class="fas fa-volume-off px-2 d-none"></i>
+                  <i class="fas fa-volume-down px-2 d-none"></i>
+                  <i class="fas fa-volume-up px-2"></i>
+                  <i class="fas fa-volume-mute px-2 d-none"></i>
+                  <div class="d-flex px-1">
+                    <input class="custom-range" type="range" name="" id="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MOBILE BOTTOM MENU -->
+      <div
+        id="mobileBottomMenu"
+        class="d-md-none animate__animated animate__bounceInUp animate__faster"
+      >
+        <div
+          class="mobile-bottom-menu-wrapper d-flex justify-content-center align-items-center py-2 h-100"
+        >
+          <a href="#" id="homeBottom" class="active">
+            <svg
+              viewBox="0 0 512 512"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" id="searchBottom">
+            <svg
+              viewBox="0 0 512 512"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M357.079 341.334l94.476 110.73-32.508 27.683-94.222-110.476q-45.714 30.476-100.826 30.476-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 23.365-5.841 45.714t-16.635 41.651-25.778 35.555zM224 357.079q28.19 0 53.841-11.048t44.19-29.587 29.587-44.19 11.048-53.841-11.048-53.841-29.587-44.191-44.19-29.587-53.841-11.047-53.841 11.047-44.191 29.588-29.587 44.19-11.047 53.841 11.047 53.841 29.588 44.19 44.19 29.587 53.841 11.048z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" id="libraryBottom">
+            <svg
+              viewBox="0 0 512 512"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div id="sideMenuMobile" class="container-fluid py-4 px-5 side-menu-main">
+        <a href="#" class="d-inline-block animate__animated animate__faster"
+          ><i class="fas fa-times-circle fa-3x"></i
+        ></a>
+        <!-- create playlist and addfav song -->
+        <div class="home-create-playlists-fav-songsmy-2 d-flex flex-column">
+          <h6 class="text-uppercase home-create-playlists-fav-songs--heading">
+            playlist
+          </h6>
+          <!-- create playlist BTN -->
+          <div
+            class="home-create-playlists--create-playlist-btn d-flex align-items-center side-btn-wrapper"
+          >
+            <a
+              href="#"
+              class="py-2 d-flex align-items-center create-playlist-btn"
+            >
+              <svg
+                class="create-play-svg"
+                shape-rendering="crispEdges"
+                viewBox="0 0 36 36"
+              >
+                <path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path>
+              </svg>
+              <span class="ml-2 side-btn-text">Create Playlist</span>
+            </a>
+          </div>
+          <!-- add favourite song BTN -->
+          <div
+            class="home-create-playlists--favourite-songs-btn d-flex align-items-center side-btn-wrapper border-bottom border-secondary"
+          >
+            <a href="#" class="py-2 d-flex align-items-center add-fav-song-btn">
+              <div class="add-fav-song-svg-wrapper">
+                <svg
+                  role="img"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                  class="Svg-ulyrgf-0 hJgLcF"
+                >
+                  <path fill="none" d="M0 0h16v16H0z"></path>
+                  <path
+                    d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="ml-2 side-btn-text">Favourite songs</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------main end --------------------->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/00general-variables.js"></script>
+    <script src="assets/js/01dom-references.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/02home-page.js"></script>
+    <script src="assets/js/03search.js"></script>
+    <script src="assets/js/users-playlists.js"></script>
+    <script src="assets/js/app-download-page.js"></script>
+    <script src="assets/js/album.js"></script>
+    <script src="/assets/js/cards-onlick-album.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

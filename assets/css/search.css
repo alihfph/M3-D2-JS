@@ -1,0 +1,28 @@
+@media(max-width: 767px) {
+  .cardMobile{
+    height: 40vmin;
+    width: 36.9vmin;
+  }
+  .cardTextMobile{
+    font-size: 0.78rem !important;
+    width: auto;
+
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .cardMobile{
+    height: 25vmin;
+    width: 21.9vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 3.1px !important;
+  }
+  .cardTextMobile{
+    font-size: 0.78rem !important;
+    width: auto;
+
+  }
+
+}

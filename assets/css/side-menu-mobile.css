@@ -1,0 +1,44 @@
+/* ============================= SIDE MENU MOBILE 🥗📲================================= */
+
+#sideMenuMobile {
+  height: 100vh;
+  background: #000;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  transition: var(--transition-time) ease;
+}
+
+#sideMenuMobile a {
+  color: var(--unactive-link-color);
+  transition: var(--transition-time);
+  width: 100%;
+}
+#sideMenuMobile a:hover {
+  text-decoration: none;
+  color: var(--active-link-color);
+}
+
+.fa-times-circle {
+  font-size: 1.5rem;
+  color: #05fa5b;
+}
+
+#sideMenuMobile ul {
+  height: 67vh;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+#sideMenuMobile::after {
+  content: 'Made with love by Hafiz, David & Ardi';
+  position: absolute;
+  bottom: 1%;
+  left: 11%;
+  color: #05fa5b;
+  z-index: 200;
+  width: 100%;
+  font-size: 0.8rem;
+}

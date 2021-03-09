@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Artist Page {name of artist} </title>
+<link rel="stylesheet" href="./artistpage.css">
+</head>
+<body>
+<!--Artist Page content-->    
+<div class="container-fluid">
+<!--Hero Section-->
+    <div class="jumbotron jumbotron-fluid d-flex justify-content-start align-items-end">
+        <div class="col">
+          <h1 class="display-1">Fluid jumbotron</h1>
+          <p class="lead">806.705 monthly listeners</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <class class="row justify-content-start align-items-center">
+        
+                <div class="col-1">
+                <button type="button" class="btn  btn-secondary my-btn-lg my-button">
+                   <i class="fas fa-play"></i>
+                   <i class="fas fa-pause d-none"></i>
+                  </button>
+                </div>
+                <div class="col-3 text-center">
+                  <button type="button" class="btn btn-outline-light">Seguir</button>
+                </div>
+                <div class="col-1">
+                    <!--button collapsable md-->
+                    <div class="container">
+                      <div class="btn-group dropdown">
+                        <button
+                          type="button"
+                          class="my-btn btn btn-outline-light  dropdown-toggle"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        ></button>
+                        <div class="dropdown-menu">
+                          <div
+                            class="col px-1 py-1 list-next d-flex justify-content-center align-items-center"
+                          >
+                          <a href="">Dejar de seguir</a>
+                          </div>
+                          <div
+                            class="col px-1 py-1 devices d-flex justify-content-center align-items-center"
+                          >
+                          <a href="">Ir a radio del artista</a>
+                          </div>
+                          <div
+                            class="col px-1 py-1 volume-control d-flex justify-content-center align-items-center"
+                          >
+                          <a href="">Compartir</a>
+                          </div>
+                          <div
+                            class="col px-1 py-1 volume-control d-flex justify-content-center align-items-center"
+                          >
+                          <a href="">Abrir en la app del ordenador</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end of button-->
+                </div>
+
+
+
+        </div>
+    </div>
+<!--End Hero Section-->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="./artistpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+.small-hr-tag {
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 100%;
+}
+.small-hr-tag:after {
+  background: #fff;
+  content: 'OR';
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+#login-container {
+  margin: auto;
+  width: 30%;
+}
+#welcometext{
+  visibility: hidden;
+  min-width: 250px; 
+  margin-left: -125px; 
+  /* background-color: rgb(27, 82, 6); */
+  background: rgb(34,195,36);
+  background: -moz-linear-gradient(0deg, rgba(34,195,36,0.0032387955182072714) 0%, rgba(20,75,8,0.8239670868347339) 70%);
+  background: -webkit-linear-gradient(0deg, rgba(34,195,36,0.0032387955182072714) 0%, rgba(20,75,8,0.8239670868347339) 70%);
+  background: linear-gradient(0deg, rgba(34,195,36,0.0032387955182072714) 0%, rgba(20,75,8,0.8239670868347339) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c324",endColorstr="#144b08",GradientType=1);
+  color: rgb(214, 212, 212);
+  text-align: center; 
+  border-radius: 2px;
+  padding: 16px; 
+  position: fixed; 
+  z-index: 200; 
+  left: 50%; 
+  top: 30px; 
+  border-radius: 25px;
+  
+  
+}
+
+#welcometext.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.3s, fadeout 0.3s 2.5s;
+  
+}
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 30px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+
